@@ -12,15 +12,19 @@ import javax.persistence.*;
 @Transactional
 @Table(name = "Usuario")
 public class Usuario {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idu;
     private Long dni_usuario;
     private String nombre_usuario;
     private String apellido_usuario;
     private String correo_usuario;
     private Long contraseña_usuario;
 
-    public Usuario(Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, Long contraseña_usuario) {
+    public Usuario(int idu,Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, Long contraseña_usuario) {
+        this.idu = idu;
         this.dni_usuario = dni_usuario;
         this.nombre_usuario = nombre_usuario;
         this.apellido_usuario = apellido_usuario;
@@ -28,6 +32,13 @@ public class Usuario {
         this.contraseña_usuario = contraseña_usuario;
     }
 
+    public int getIdu() {
+        return idu;
+    }
+
+    public void setIdu(int idu) {
+        this.idu = idu;
+    }
     public Long getDni_usuario() {
         return dni_usuario;
     }

@@ -6,18 +6,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class UsuarioDTO {
+    private  int idu;
     private Long dni_usuario;
     private String nombre_usuario;
     private String apellido_usuario;
     private String correo_usuario;
     private Long contraseña_usuario;
 
-    public UsuarioDTO(Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, Long contraseña_usuario) {
+    public UsuarioDTO(int idu,Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, Long contraseña_usuario) {
+        this.idu = idu;
         this.dni_usuario = dni_usuario;
         this.nombre_usuario = nombre_usuario;
         this.apellido_usuario = apellido_usuario;
         this.correo_usuario = correo_usuario;
         this.contraseña_usuario = contraseña_usuario;
+    }
+
+    public int getIdu() {
+        return idu;
+    }
+
+    public void setIdu(int idu) {
+        this.idu = idu;
     }
 
     public Long getDni_usuario() {
