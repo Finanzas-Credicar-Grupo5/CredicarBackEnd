@@ -5,5 +5,5 @@ import com.upc.curso.entidades.Usuario;
 import java.util.Optional;
 
 public interface UsuarioService {
-    Optional<Usuario> login(Long dni_usuario, Long contraseña_usuario);
+    Optional<Usuario> login(Long dni_usuario, String contraseña_usuario);
 }

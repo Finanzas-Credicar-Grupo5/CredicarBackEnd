@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Optional<Usuario> login(Long dni_usuario, Long contraseña_usuario) {
+    public Optional<Usuario> login(Long dni_usuario, String contraseña_usuario) {
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(dni_usuario);
 
         return usuarioOptional.filter(usuario -> usuario.getContraseña_usuario().equals(contraseña_usuario));

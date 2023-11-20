@@ -21,9 +21,9 @@ public class Usuario {
     private String nombre_usuario;
     private String apellido_usuario;
     private String correo_usuario;
-    private Long contraseña_usuario;
+    private String contraseña_usuario;
 
-    public Usuario(int idu,Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, Long contraseña_usuario) {
+    public Usuario(int idu,Long dni_usuario, String nombre_usuario, String apellido_usuario, String correo_usuario, String contraseña_usuario) {
         this.idu = idu;
         this.dni_usuario = dni_usuario;
         this.nombre_usuario = nombre_usuario;
@@ -71,11 +71,11 @@ public class Usuario {
         this.correo_usuario = correo_usuario;
     }
 
-    public Long getContraseña_usuario() {
+    public String getContraseña_usuario() {
         return contraseña_usuario;
     }
 
-    public void setContraseña_usuario(Long contraseña_usuario) {
+    public void setContraseña_usuario(String contraseña_usuario) {
         this.contraseña_usuario = contraseña_usuario;
     }
 
