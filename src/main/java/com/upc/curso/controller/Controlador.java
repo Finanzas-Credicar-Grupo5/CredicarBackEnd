@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {"https://credicar-font-end.vercel.app","https://credicarapi-xctq.onrender.com"})
+@CrossOrigin(origins = {"http://localhost:4200","https://credicarapi-xctq.onrender.com"})
 public class Controlador {
     @Autowired //inyectando
     private UsuarioServiceImpl usuarioServiceImpl;
